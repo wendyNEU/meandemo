@@ -9,9 +9,9 @@ module.exports = {
    * and http://mongoosejs.com/docs/connections.html for more information
    */
   http: {
-	port: process.env.OPENSHIFT_NODEJS_PORT,
+	port: process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 3000,
   },
-  hostname: process.env.OPENSHIFT_NODEJS_IP,
+  hostname: process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1',
   dbOptions: {
     /*
     server: {
